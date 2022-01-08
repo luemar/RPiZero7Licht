@@ -11,7 +11,7 @@ import random
 import logging
 
 t = time.ctime()
-logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w',level=logging.>
+logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w',level=logging.DEBUG, format='%(message)s:%(asctime)s')
 
 spot_main = LED(13)
 spot_aux = LED(19)
@@ -106,7 +106,7 @@ while True:
             spot_gallery.off() #23:39 - 23:54
             logging.info('gallery off')
 			
-		 elif month(time.ctime()) == 'Aug'or month(time.ctime()) == 'Sep'or mont>
+	elif month(time.ctime()) == 'Aug'or month(time.ctime()) == 'Sep'or mont>
             time.sleep(0.5)
             spot_main.on()
             logging.info('spot_main.on')
@@ -145,7 +145,7 @@ while True:
             logging.info('spot_aux.off')
             time.sleep(9000)
             spot_gallery.off() #23:40 - 23:43
-            logging.info('spot_gallery.off')
+        logging.info('spot_gallery.off')
         break
 sys.exit()
 

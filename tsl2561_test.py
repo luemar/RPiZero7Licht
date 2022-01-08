@@ -8,7 +8,8 @@ from gpiozero import LED
 from random import randint
 import logging
 
-logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w', format='%(lev$
+logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w',level=logging.DEBUG, format='%(message)s:%(asctime)s')
+
 logging.info('tsl_2561.py started')
 
 BUS = 1
