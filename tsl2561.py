@@ -11,7 +11,7 @@ import random
 import logging
 
 t = time.ctime()
-logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w',level=logging.>
+logging.basicConfig(filename='/home/pi/mylog1.log', filemode='w',level=logging.DEBUG, format='%(message)s:%(asctime)s')
 
 spot_main = LED(13)
 spot_aux = LED(19)
